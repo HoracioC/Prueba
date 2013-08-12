@@ -1,0 +1,169 @@
+#menu {
+	padding:0;
+	margin:0;
+	list-style:none;
+	height:43px;
+	position:relative;
+	z-index:500;
+}
+#menu li {
+	float:left;
+}
+
+#menu li:last-child {
+	border-bottom: 4px solid #ff6c00;
+}
+#menu li a {
+	display:block;
+	float:left;
+	height:34px;
+	background: url(../images/navb.png) top left repeat-x;
+	color:#545454;
+	text-decoration:none;
+	font-size:11px;
+	padding: 9px 17px 0 17px;
+}
+#menu table {
+	border-collapse:collapse;
+	width:0;
+	height:0;
+	position:absolute;
+	top:0;
+	left:0;
+}
+/* Default link styling */
+
+/* Style the list OR link hover. Depends on which browser is used */
+
+#menu li a:hover {
+	z-index:200;
+	position:relative;
+	color:#fff;
+}
+#menu li:hover {
+	position:relative;
+	z-index:200;
+	width:auto;
+}
+#menu li:hover > a {
+	color:#fff;
+	background: url(../images/navb.png) top left repeat-x;
+	background-position: 0 -43px;
+}
+#menu li:hover > a.sub {
+	color:#fff;
+	background: url(../images/navb.png) top left repeat-x;
+	background-position: 0 -43px;
+}
+#menu li.current a {
+	color:#fff;
+	background:#840;
+}
+#menu li a.sub {
+	background: url(../images/navb.png) top left repeat-x;
+}
+#menu :hover ul {
+	left:0;
+	top:40px;
+	width:120px;
+	background:#444;
+}
+/* keep the 'next' level invisible by placing it off screen. */
+#menu ul, #menu :hover ul ul {
+	position:absolute;
+	left:-9999px;
+	top:-9999px;
+	width:0;
+	height:0;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#menu :hover ul :hover ul {
+	left:160px;
+	top:0;
+	background:#222;
+	white-space:nowrap;
+	width:140px;
+	z-index:200;
+	height:auto;
+}
+#menu :hover ul li {
+	margin:0;
+}
+#menu :hover ul li a 
+{
+	min-width:160px;
+	padding:0;
+	padding-left:10px;
+	background:#2b2b2b;
+	color:#ccc;
+	 min-height:30px;
+	 padding-top:10px;
+}
+#menu :hover ul li.long a {
+	width:250px;
+	padding:0;
+	text-indent:10px;
+	background:#2b2b2b;
+	color:#ccc;
+	 min-height:30px;
+}
+#menu ul.flota {
+	margin:0;
+	width: 300px;
+	float: left;
+	height: 240px;
+	background: #2b2b2b;
+	border-bottom: 4px solid #ff6c00;
+}
+#menu ul.flota li.float a {
+	width:150px;
+	padding:0;
+	text-indent:10px;
+	background:#2b2b2b;
+	color:#ccc;
+	height:30px;
+	line-height:30px;
+	float: left;
+}
+#menu li.float:last-child {
+	border: 0;
+}
+#menu .borde {
+	border-bottom: 4px solid #ff6c00;
+	font-weight: normal;
+}
+#menu :hover ul li a.fly {
+	background: #2b2b2b url(../images/right-arrow.gif) no-repeat right center;
+}
+#menu :hover ul :hover, #menu :hover ul li.long a:hover, #menu ul.flota li.float a:hover {
+	background-color:#ff6c00;
+	color:#fff;
+}
+#menu :hover ul :hover a.fly {
+	background-color:#ff6c00;
+	color:#fff;
+}
+#menu :hover ul :hover ul li a {
+	width:190px;
+	padding:5px;
+	text-indent:10px;
+	background:#2b2b2b;
+	color:#ccc;
+}
+#menu :hover ul :hover ul :hover {
+	background-color:#ff6c00;
+	color:#fff;
+}
+#menu span {
+	font-size: 13px;
+	font-weight: bold;
+	display: block;
+}
+#menu span em {
+	font-size: 11px;
+	font-weight: normal;
+	display:block;
+}
+em { font-style:normal;}
